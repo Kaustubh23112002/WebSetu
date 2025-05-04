@@ -201,7 +201,7 @@ body.nav-active { overflow: hidden; }
 
 .h1 { font-size: var(--fs-1); }
 
-.h2 { font-size: var(--fs-2); }
+.h2 { font-size: 26px; }
 
 .h3 { font-size: var(--fs-3); }
 
@@ -280,6 +280,7 @@ body.nav-active { overflow: hidden; }
   background-color: var(--white);
   position: fixed;
   animation: slideIn 0.5s ease forwards;
+  padding-block: 0px;
 }
 
 @keyframes slideIn {
@@ -1039,7 +1040,7 @@ body.nav-active { overflow: hidden; }
    * HERO
    */
 
-  .hero-text { padding-inline-end: 100px; }
+  .hero-text { padding-inline-end: 0px; text-align: justify;}
 
 
 
@@ -1104,4 +1105,107 @@ body.nav-active { overflow: hidden; }
 
   .feature-list { grid-template-columns: 1fr 1fr; }
 
+}
+
+
+
+/* Contact Form Section */
+#contact {
+  width: 100%;
+  /* background-color: #f4f4f4; */
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-group textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+.submit-btn1 {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn1:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+      padding: 30px 15px;
+  }
+
+  .container {
+      padding: 10px;
+  }
+
+  #contact h2 {
+      font-size: 26px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .submit-btn1 {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact h2 {
+      font-size: 22px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .submit-btn1 {
+      font-size: 14px;
+      padding: 12px;
+  }
 }
