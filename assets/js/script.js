@@ -141,3 +141,35 @@ const initAccordion = function (currentAccordion) {
 }
 
 for (let i = 0, len = accordions.length; i < len; i++) { initAccordion(accordions[i]); }
+
+const input = document.getElementById("subject");
+const errorMessage = document.getElementById("error-message");
+const form = document.getElementById("contact-form");
+
+// Prevent non-digit input
+input.addEventListener("keypress", function (e) {
+  if (!/\d/.test(e.key) || this.value.length >= 10) {
+    e.preventDefault();
+  }
+});
+
+// Optional: Prevent pasting invalid input
+input.addEventListener("paste", function (e) {
+  const paste = (e.clipboardData || window.clipboardData).getData("text");
+  if (!/^\d{1,10}$/.test(paste)) {
+    e.preventDefault();
+  }
+});
+
+// Validate on form submit
+form.addEventListener("submit", function (e) {
+  const value = input.value.trim();
+  const isValid = /^\d{10}$/.test(value);
+
+  if (!isValid) {
+    e.preventDefault();
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+});

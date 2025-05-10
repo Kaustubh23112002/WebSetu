@@ -46,20 +46,20 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
+  <header class="header" data-header style="background-color: white;">
+    <div class="container" style="padding: 10px 20px 0px 20px;">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.jpeg" width="80" height="24" alt="Adex home" class="logo-light">
+        <img src="./assets/images/new-logo.jpeg" width="120" height="120" alt="Adex home" class="logo-light" style="margin-top: -10px;">
 
-        <img src="./assets/images/logo.png" width="100" height="24" alt="Adex home" class="logo-dark">
+        <img src="./assets/images/new-logo.jpeg" width="100" height="24" alt="Adex home" class="logo-dark">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
           <a href="#" class="logo">
-            <img src="./assets/images/logo.jpeg" width="74" height="24" alt="Adex home">
+            <img src="./assets/images/new-logo.jpeg" width="74" height="24" alt="Adex home">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -721,7 +721,8 @@
             <h2>Contact Us</h2>
             <p>Have a question or want to work together? Get in touch with us!</p>
     
-            <form action="your_form_submission_url" method="POST" id="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+              <input type="hidden" name="access_key" value="78c174e9-a67f-4468-816e-c2a778b106a9">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -733,8 +734,9 @@
                 </div>
     
                 <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+                    <label for="number">Number</label>
+                    <input type="text" id="subject" name="number" required placeholder="Enter your number">
+                    <small id="error-message" style="color: red; display: none;">Please enter exactly 10 digits (numbers only).</small>
                 </div>
     
                 <div class="form-group">
@@ -785,11 +787,11 @@
       <div class="footer-brand">
 
         <a href="#" class="logo">
-          <img src="./assets/images/logo.jpeg" width="74" height="24" alt="Adex home">
+          <img src="./assets/images/new-logo.jpeg" width="74" height="24" alt="Adex home">
         </a>
 
         <p class="footer-text">
-          &copy; 2022 codewithsadee. <br> All rights reserved.
+          &copy; 2025 WebSetu. <br> All rights reserved.
         </p>
 
         <ul class="social-list">
@@ -801,26 +803,14 @@
           </li>
 
           <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-dribbble"></ion-icon>
+            <a href="https://www.linkedin.com/company/websetu-it-solution/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li>
             <a href="#" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
             </a>
           </li>
 
@@ -841,7 +831,7 @@
         </li>
 
         <li>
-          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+          <a href="mailto:info@email.com" class="footer-link">contact@websetu.co.in</a>
         </li>
 
         <li>
